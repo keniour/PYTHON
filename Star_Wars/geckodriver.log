@@ -1,0 +1,120 @@
+1677588926552	geckodriver	INFO	Listening on 127.0.0.1:55858
+1677588926772	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "55859" "--r ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/qx/gp652hm113l8j8nvy4x4fr640000gn/T/rust_mozprofile2HpYwI"
+2023-02-28 09:55:32.585 plugin-container[47675:8219322] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-02-28 09:55:32.608 plugin-container[47675:8219322] nil host used in call to allowsAnyHTTPSCertificateForHost:
+WebDriver BiDi listening on ws://127.0.0.1:55859
+2023-02-28 09:55:32.778 plugin-container[47675:8219322] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-02-28 09:55:32.778 plugin-container[47675:8219322] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-02-28 09:55:32.778 plugin-container[47675:8219320] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-02-28 09:55:32.778 plugin-container[47675:8219320] nil host used in call to allowsAnyHTTPSCertificateForHost:
+DevTools listening on ws://127.0.0.1:55859/devtools/browser/d5916f78-95ba-4d1c-8805-2858d18eb1aa
+[GFX1-]: Unrecognized feature ACCELERATED_CANVAS2D
+1677590266833	geckodriver	INFO	Listening on 127.0.0.1:56372
+1677590267339	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "56373" "--r ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/qx/gp652hm113l8j8nvy4x4fr640000gn/T/rust_mozprofileOB1rzU"
+1677590267849	Marionette	INFO	Marionette enabled
+1677590267916	Marionette	INFO	Listening on port 56387
+Read port: 56387
+2023-02-28 10:17:47.967 plugin-container[48325:8234809] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-02-28 10:17:47.968 plugin-container[48325:8234809] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-02-28 10:17:47.970 plugin-container[48325:8234809] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-02-28 10:17:47.970 plugin-container[48325:8234809] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-02-28 10:17:47.971 plugin-container[48325:8234814] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-02-28 10:17:47.971 plugin-container[48325:8234814] nil host used in call to allowsAnyHTTPSCertificateForHost:
+WebDriver BiDi listening on ws://127.0.0.1:56373
+1677590268194	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/qx/gp652hm113l8j8nvy4x4fr640000gn/T/rust_mozprofileOB1rzU/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:56373/devtools/browser/a3839cb8-fd51-4777-93a2-2e1a9b8021a6
+1677590583095	geckodriver	INFO	Listening on 127.0.0.1:56456
+1677590583606	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "56457" "--r ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/qx/gp652hm113l8j8nvy4x4fr640000gn/T/rust_mozprofile1r4FfJ"
+1677590584083	Marionette	INFO	Marionette enabled
+1677590584149	Marionette	INFO	Listening on port 56464
+2023-02-28 10:23:04.197 plugin-container[48508:8239381] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-02-28 10:23:04.198 plugin-container[48508:8239381] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-02-28 10:23:04.211 plugin-container[48508:8239381] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-02-28 10:23:04.211 plugin-container[48508:8239381] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-02-28 10:23:04.211 plugin-container[48508:8239387] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-02-28 10:23:04.211 plugin-container[48508:8239387] nil host used in call to allowsAnyHTTPSCertificateForHost:
+Read port: 56464
+WebDriver BiDi listening on ws://127.0.0.1:56457
+1677590584412	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/qx/gp652hm113l8j8nvy4x4fr640000gn/T/rust_mozprofile1r4FfJ/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:56457/devtools/browser/fe065dd9-9904-4833-97d3-29285d509a67
+[GFX1-]: Unrecognized feature ACCELERATED_CANVAS2D
+1677590661596	geckodriver	INFO	Listening on 127.0.0.1:56545
+1677590662110	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "56546" "--r ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/qx/gp652hm113l8j8nvy4x4fr640000gn/T/rust_mozprofilekFZZEg"
+1677590662588	Marionette	INFO	Marionette enabled
+1677590662649	Marionette	INFO	Listening on port 56553
+2023-02-28 10:24:22.692 plugin-container[48566:8240906] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-02-28 10:24:22.692 plugin-container[48566:8240906] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-02-28 10:24:22.695 plugin-container[48566:8240906] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-02-28 10:24:22.695 plugin-container[48566:8240906] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-02-28 10:24:22.695 plugin-container[48566:8240910] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-02-28 10:24:22.695 plugin-container[48566:8240910] nil host used in call to allowsAnyHTTPSCertificateForHost:
+Read port: 56553
+WebDriver BiDi listening on ws://127.0.0.1:56546
+1677590662900	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/qx/gp652hm113l8j8nvy4x4fr640000gn/T/rust_mozprofilekFZZEg/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:56546/devtools/browser/ee6c7b95-12de-4789-a81d-3bfd435c27ee
+JavaScript warning: https://cdn.intergient.com/pageos/1.9.13/videoCard.01fa78e7064a386f48fc.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: resource://gre/modules/LoginManagerChild.jsm, line 116: NS_NOINTERFACE: Component returned failure code: 0x80004002 (NS_NOINTERFACE) [nsIWebProgress.DOMWindow]
+JavaScript error: resource://gre/modules/LoginManagerChild.jsm, line 116: NS_NOINTERFACE: Component returned failure code: 0x80004002 (NS_NOINTERFACE) [nsIWebProgress.DOMWindow]
+JavaScript warning: https://z.moatads.com/playwireprebidheader597261727146/moatheader.js, line 222: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+2023-02-28 13:24:28.876 plugin-container[48584:8241298] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-02-28 13:24:28.877 plugin-container[48584:8241298] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-02-28 13:24:28.880 plugin-container[48584:8241298] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-02-28 13:24:28.881 plugin-container[48584:8241298] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-02-28 13:24:28.881 plugin-container[48584:8241293] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-02-28 13:24:28.881 plugin-container[48584:8241293] nil host used in call to allowsAnyHTTPSCertificateForHost:
+JavaScript warning: https://pagead2.googlesyndication.com/bg/bP143D2MlfrYa-8L1g1kZrRY_Hu8960J3R7GynJ9320.js line 2 > eval line 2472 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1677590677959	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/bP143D2MlfrYa-8L1g1kZrRY_Hu8960J3R7GynJ9320.js line 2 > eval line 3942 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/bP143D2MlfrYa-8L1g1kZrRY_Hu8960J3R7GynJ9320.js line 2 > eval line 6392 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/bP143D2MlfrYa-8L1g1kZrRY_Hu8960J3R7GynJ9320.js line 2 > eval line 5008 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/bP143D2MlfrYa-8L1g1kZrRY_Hu8960J3R7GynJ9320.js line 2 > eval line 1300 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript warning: https://letterboxd.com/ line 1 > injectedScript, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://z.moatads.com/quantcastv2691176990399/moatad.js#moatClientLevel1=p-4T98ck4dZrJdS&moatClientLevel2=qfm&moatClientLevel3=f76f9d59-6929-45f8-b3a4-ecc95099a5b7&moatClientLevel4=10e378cf-4f32-40f0-a076-328d8f3487a4&uid=NDgj1jQ_LoIoaS-GNSEv1WM4NoFgOyzOZG5-gT09LddnPH_RJOshMw==, line 240: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+[GFX1-]: Unrecognized feature ACCELERATED_CANVAS2D
+[GFX1-]: Unrecognized feature ACCELERATED_CANVAS2D
+1677591234236	geckodriver	INFO	Listening on 127.0.0.1:58580
+1677591234752	mozrunner::runner	INFO	Running command: "/Applications/Firefox.app/Contents/MacOS/firefox-bin" "--marionette" "--remote-debugging-port" "58581" "--r ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/qx/gp652hm113l8j8nvy4x4fr640000gn/T/rust_mozprofile0RMeJS"
+1677591235429	Marionette	INFO	Marionette enabled
+2023-02-28 10:33:55.592 plugin-container[48796:8249920] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-02-28 10:33:55.592 plugin-container[48796:8249920] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-02-28 10:33:55.597 plugin-container[48796:8249920] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-02-28 10:33:55.597 plugin-container[48796:8249920] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-02-28 10:33:55.597 plugin-container[48796:8249918] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-02-28 10:33:55.597 plugin-container[48796:8249918] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1677591235734	Marionette	INFO	Listening on port 58596
+Read port: 58596
+WebDriver BiDi listening on ws://127.0.0.1:58581
+1677591235873	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/qx/gp652hm113l8j8nvy4x4fr640000gn/T/rust_mozprofile0RMeJS/search.json.mozlz4", (void 0)))
+DevTools listening on ws://127.0.0.1:58581/devtools/browser/8f2ab59b-86a9-44ed-9ce2-03b913376a8c
+JavaScript warning: https://cdn.intergient.com/pageos/1.9.13/videoCard.01fa78e7064a386f48fc.js, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: resource://gre/modules/LoginManagerChild.jsm, line 116: NS_NOINTERFACE: Component returned failure code: 0x80004002 (NS_NOINTERFACE) [nsIWebProgress.DOMWindow]
+JavaScript error: resource://gre/modules/LoginManagerChild.jsm, line 116: NS_NOINTERFACE: Component returned failure code: 0x80004002 (NS_NOINTERFACE) [nsIWebProgress.DOMWindow]
+JavaScript warning: https://z.moatads.com/playwireprebidheader597261727146/moatheader.js, line 222: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+2023-02-28 13:34:01.862 plugin-container[48816:8250358] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-02-28 13:34:01.862 plugin-container[48816:8250358] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-02-28 13:34:01.868 plugin-container[48816:8250358] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-02-28 13:34:01.868 plugin-container[48816:8250358] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2023-02-28 13:34:01.868 plugin-container[48816:8250379] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2023-02-28 13:34:01.868 plugin-container[48816:8250379] nil host used in call to allowsAnyHTTPSCertificateForHost:
+JavaScript warning: https://pagead2.googlesyndication.com/bg/bP143D2MlfrYa-8L1g1kZrRY_Hu8960J3R7GynJ9320.js line 2 > eval line 3015 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1677591265830	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+1677591265834	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript warning: https://pagead2.googlesyndication.com/bg/bP143D2MlfrYa-8L1g1kZrRY_Hu8960J3R7GynJ9320.js line 2 > eval line 179 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+1677591268575	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+JavaScript error: , line 0: TypeError: NetworkError when attempting to fetch resource.
+[GFX1-]: Unrecognized feature ACCELERATED_CANVAS2D
