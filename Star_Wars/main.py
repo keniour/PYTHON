@@ -64,7 +64,9 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
   
-def afficher_film(film):  
+#def afficher_film(film):  
+if True==True :
+    film='Star Wars: Episode I  The Phantom Menace'
     browser=webdriver.Chrome()
 
     browser.get('https://letterboxd.com/')
@@ -72,9 +74,10 @@ def afficher_film(film):
     elem=browser.find_element(By.NAME, 'q')
     elem.send_keys(film,Keys.RETURN)
     
-    elem=browser.find_element(By.CLASS_NAME,'results')
-    elem.find_element(By.CLASS_NAME,'film-title-wrapper')
+    #elem=browser.find_element(By.CLASS_NAME,'results')
+    elem=browser.find_element(By.CLASS_NAME,'film-title-wrapper')
     elem.click()
     
-    #browser.quit()
+    i=input('Fermer ?')
+    browser.quit()
     
