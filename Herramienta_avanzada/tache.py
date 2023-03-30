@@ -9,6 +9,7 @@ class tache :
     
     def __init__(self,name,temps, succedeurs=[0], predecesseurs=""):
         
+        self.name=name
         self.temps=temps
         self.pred=predecesseurs
         self.succ=succedeurs

@@ -81,10 +81,5 @@ def construccion_grafo_precedencia():
 
     
     
-# %%
-
-if __name__=="__main__" :
-    
-    
 
 
