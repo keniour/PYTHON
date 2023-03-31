@@ -79,7 +79,7 @@ for g in range(1,500): #500=numero d'iteracion
         
 
         
-        #attention a la fonction sum la :
+        #?attention a la fonction sum la :
         aux=sum(w) #variable auxiliar para determinar que actividad se va a seleccionar 
         
         if aux>0 :  #si en w hay componentes 
@@ -102,8 +102,25 @@ for g in range(1,500): #500=numero d'iteracion
                 if w[0][k]==1 and duracion[k]+capa_ET[num_ET]>TC :
                     w[0][k]=0
             
-            #!Repetir hasta que todas
-     
+            #!Repetir hasta que todas que todas las tareas estén asignadas a una ET
+            #? Autre sum :
+            if sum(asig_tarea)==num_tot_act  #si asignaron todas las actividades
+                asignacion_terminada=1
+            
+        else :
+            num_ET+=1
+            I=0
+    
+    #! Calcular la eficiencia de la solucion actual y guardar la solucion solo si mejora la eficiencia de la solucion considerada como la mejor hasta el momento
+    
+    TCT=max(capa_ET)
+    #? autre sum :
+    aux2=sum(capa_ET)/(TCT*num_ET) #calculo de la eficiencia 
+    if aux2>eff_max :  #para determinar si es mas eficiente que la anterior
+        eff_max=aux2
+        sol=matriz_act
+        sol_capa_ET=capa_ET
+        sol_num_ET=num_ET
 
 
 
