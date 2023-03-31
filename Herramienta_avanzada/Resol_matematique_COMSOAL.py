@@ -47,7 +47,7 @@ for g in range(1,500): #500=numero d'iteracion
     matriz_act=np.zeros((num_tot_act,num_tot_act)) #matriz que guarda las actividades que añadamos durante el process 
     #(cada linea=un ET y se pone el numero de las actividades que hace este ET en su linea)
     #! ATTENTION : les chiffres dans la matriz_act désigne les activités comment commencant par 1 (et non pas par 0)
-    num_ET=1
+    num_ET=0
     
     w=np.zeros((1,num_tot_act))
     
@@ -79,7 +79,7 @@ for g in range(1,500): #500=numero d'iteracion
 
         
         
-        aux=sum(w) #variable auxiliar para determinar que actividad se va a seleccionar 
+        aux=sum(w[0]) #variable auxiliar para determinar que actividad se va a seleccionar 
         
         if aux>0 :  #si en w hay componentes 
             aleat=random.randint(1,aux)#se elige aleatoriamente una actividad
@@ -99,12 +99,12 @@ for g in range(1,500): #500=numero d'iteracion
             #!5-Actualizar el grupo de tareas candidatas.
             #actualizacion del vector w
             for k in range(num_tot_act) : #se actualiza w sacando las actividades donde su tiempo es mayor que la capacidad de la ET
-                if w[0][k]==1 and duracion[k]+capa_ET[num_ET]>TC :
+                if w[0][k]==1 and duracion[i]+capa_ET[0][num_ET]>TC : #? j'ai modifié i en k ici
                     w[0][k]=0 
             
             #!6-Repetir hasta que todas que todas las tareas estén asignadas a una ET
             
-            if sum(opAsig)==num_tot_act : #si asignaron todas las actividades
+            if sum(opAsig[0])==num_tot_act : #si asignaron todas las actividades
                 asignacion_terminada=1
             
         else :
@@ -113,8 +113,8 @@ for g in range(1,500): #500=numero d'iteracion
     
     #! Calcular la eficiencia de la solucion actual y guardar la solucion solo si mejora la eficiencia de la solucion considerada como la mejor hasta el momento
     
-    TCT=max(capa_ET)
-    aux2=sum(capa_ET)/(TCT*num_ET) #calculo de la eficiencia 
+    TCT=max(capa_ET[0])
+    aux2=sum(capa_ET[0])/(TCT*num_ET) #calculo de la eficiencia 
     if aux2>eff_max :  #para determinar si es mas eficiente que la anterior
         eff_max=aux2
         sol=matriz_act
