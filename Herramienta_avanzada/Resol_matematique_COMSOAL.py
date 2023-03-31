@@ -37,7 +37,7 @@ sol=np.zeros((num_tot_act,num_tot_act)) #matriz de cero donde se pondra la mejor
 sol_capa_ET=np.zeros((1,num_tot_act)) #vector solucion que indica la capacidad de cada ET
 sol_num_ET=0#solucion de la Q de ET
 
-#%%
+
 
 for g in range(1,500): #500=numero d'iteracion
     
@@ -46,6 +46,7 @@ for g in range(1,500): #500=numero d'iteracion
     
     matriz_act=np.zeros((num_tot_act,num_tot_act)) #matriz que guarda las actividades que añadamos durante el process 
     #(cada linea=un ET y se pone el numero de las actividades que hace este ET en su linea)
+    #! ATTENTION : les chiffres dans la matriz_act désigne les activités comment commencant par 1 (et non pas par 0)
     num_ET=1
     
     w=np.zeros((1,num_tot_act))
@@ -55,17 +56,18 @@ for g in range(1,500): #500=numero d'iteracion
     I=0 #variable aux utilizada para guardar las act que realiza cada ET
     
     while not asignacion_terminada  :
-        for i in range(1,num_tot_act) : #recorrer todas las actividades p ver si pueden ingresar a w
+        for i in range(num_tot_act) : #recorrer todas las actividades p ver si pueden ingresar a w
             if opAsig[0][i]==0 : #si la operacion no fue aun asignada
-                j=1
+                j=0
                 puedeEjecutarse=1 #val aux que vale 1 si la act i esta en condiciones de ejecutarse
                 
-                while j<=num_tot_act :  #recorrer todas las actividades
-                    if precedesores[i][j]==0 or opAsig[0][j]=1 : #si no tiene predecesores o el predecesor ya fue asignado
+                while j<num_tot_act :  #recorrer todas las actividades
+                    if precedesores[i][j]==0 or opAsig[0][j]==1 : #si no tiene predecesores o el predecesor ya fue asignado
                         j+=1
                     else : #cas ou la tache a un prédecesseurs qui n'a pas encore été asigné 
-                        j=num_tot_act+1 #salgo del while 
                         puedeEjecutarse=0
+                        break #salgo del while 
+                        
                         
 
                 if puedeEjecutarse==1 and duracion[i]+capa_ET[0][num_ET]<=TC : 
@@ -82,26 +84,27 @@ for g in range(1,500): #500=numero d'iteracion
         if aux>0 :  #si en w hay componentes 
             aleat=random.randint(1,aux)#se elige aleatoriamente una actividad
             k=0         #k e i variable auxiliares
-            i=0
+            i=-1
             while k<aleat :     #se busca la actividad num aleat de las asignadas a w
                 i+=1
                 k+=w[0][i]
+                
 
             I+=1
             #! 4-Asignar la tarea a la ET bajo análisis. Actualizar tiempos de la ET.
             opAsig[0][i]=1  #se asigna la act elegida
             w[0][i]=0   #se quita de w
             capa_ET[0][num_ET]+=duracion[i]    #actualizar capacidad ocupada en la estacion vigente
-            matriz_act[num_ET][I]=i    #se guarda q act se hace en cada ET
+            matriz_act[num_ET][I]=i+1    #se guarda q act se hace en cada ET
             #!5-Actualizar el grupo de tareas candidatas.
             #actualizacion del vector w
-            for k in range(1,num_tot_act) : #se actualiza w sacando las actividades donde su tiempo es mayor que la capacidad de la ET
+            for k in range(num_tot_act) : #se actualiza w sacando las actividades donde su tiempo es mayor que la capacidad de la ET
                 if w[0][k]==1 and duracion[k]+capa_ET[num_ET]>TC :
                     w[0][k]=0 
             
             #!6-Repetir hasta que todas que todas las tareas estén asignadas a una ET
             
-            if sum(opAsig)==num_tot_act  #si asignaron todas las actividades
+            if sum(opAsig)==num_tot_act : #si asignaron todas las actividades
                 asignacion_terminada=1
             
         else :
