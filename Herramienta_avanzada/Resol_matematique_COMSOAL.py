@@ -9,32 +9,28 @@
 
 #%%Definicion de las variables 
 import numpy as np
-
+import random
 
 #Definicion del tiempo de ciclo
-TC=40
+TC=12
 
-num_tot_act=15
+num_tot_act=11
 
 #duracion de cada actividad :
-duracion=[10,12,7,8,20,4,11,6,9,12,15,13,9,8,9]
+duracion=[5,2,3,4,3,2,3,3.5,1,2.5,1]
 
 #Matriz de relacion es decedencia (vale 1 si j precede a i)
-precedesores=[[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-              [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-              [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-              [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-              [0,1,1,0,0,0,0,0,0,0,0,0,0,0,0],
-              [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-              [0,0,0,1,0,0,0,0,0,0,0,0,0,0,0],
-              [0,0,0,1,1,1,0,0,0,0,0,0,0,0,0],
-              [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
-              [0,0,0,0,0,0,1,0,1,0,0,0,0,0,0],
-              [0,0,0,0,0,0,1,1,0,0,0,0,0,0,0],
-              [0,0,0,0,0,0,0,0,0,1,0,0,0,0,0],
-              [0,0,0,0,0,0,0,0,0,1,1,0,0,0,0],
-              [0,0,0,0,0,0,0,0,0,0,0,0,1,0,0],
-              [0,0,0,0,0,0,0,0,0,0,0,1,0,1,0]]
+precedesores=[[0,0,0,0,0,0,0,0,0,0,0],
+              [0,0,0,0,0,0,0,0,0,0,0],
+              [0,1,0,0,0,0,0,0,0,0,0],
+              [0,0,1,0,0,0,0,0,0,0,0],
+              [0,1,0,0,0,0,0,0,0,0,0],
+              [1,0,0,0,0,0,0,0,0,0,0],#F
+              [0,0,0,0,0,0,0,0,0,0,0],
+              [0,0,0,0,1,1,0,0,0,0,0],
+              [0,0,0,0,0,0,0,1,0,0,0],
+              [0,0,0,1,0,0,0,0,0,0,0],
+              [0,0,0,0,0,0,0,1,1,1,0]]
 
 eff_max=0
 sol=np.zeros((num_tot_act,num_tot_act)) #matriz de cero donde se pondra la mejor solucion
@@ -48,7 +44,8 @@ for g in range(1,500): #500=numero d'iteracion
     opAsig=np.zeros((1,num_tot_act)) #vector inicial de cero que indica 1 en la posicion i si la tarea i ya fue asignada a un ET
     capa_ET=np.zeros((1,num_tot_act)) #Vector que indica la capacidad de cada ET
     
-    matriz_act=np.zeros((num_tot_act,num_tot_act)) #matriz que guarda las actividades que añadamos durante el process
+    matriz_act=np.zeros((num_tot_act,num_tot_act)) #matriz que guarda las actividades que añadamos durante el process 
+    #(cada linea=un ET y se pone el numero de las actividades que hace este ET en su linea)
     num_ET=1
     
     w=np.zeros((1,num_tot_act))
@@ -79,11 +76,11 @@ for g in range(1,500): #500=numero d'iteracion
         
 
         
-        #?attention a la fonction sum la :
+        
         aux=sum(w) #variable auxiliar para determinar que actividad se va a seleccionar 
         
         if aux>0 :  #si en w hay componentes 
-            aleat=      #se elige aleatoriamente una actividad
+            aleat=random.randint(1,aux)#se elige aleatoriamente una actividad
             k=0         #k e i variable auxiliares
             i=0
             while k<aleat :     #se busca la actividad num aleat de las asignadas a w
@@ -91,19 +88,19 @@ for g in range(1,500): #500=numero d'iteracion
                 k+=w[0][i]
 
             I+=1
-            
+            #! 4-Asignar la tarea a la ET bajo análisis. Actualizar tiempos de la ET.
             opAsig[0][i]=1  #se asigna la act elegida
             w[0][i]=0   #se quita de w
-                        #actualizar capacidad ocupada en la estacion vigente
-            matriz_act[num_ET][I]=i     #se guarda q act se hace en cada ET
-        
+            capa_ET[0][num_ET]+=duracion[i]    #actualizar capacidad ocupada en la estacion vigente
+            matriz_act[num_ET][I]=i    #se guarda q act se hace en cada ET
+            #!5-Actualizar el grupo de tareas candidatas.
             #actualizacion del vector w
             for k in range(1,num_tot_act) : #se actualiza w sacando las actividades donde su tiempo es mayor que la capacidad de la ET
                 if w[0][k]==1 and duracion[k]+capa_ET[num_ET]>TC :
-                    w[0][k]=0
+                    w[0][k]=0 
             
-            #!Repetir hasta que todas que todas las tareas estén asignadas a una ET
-            #? Autre sum :
+            #!6-Repetir hasta que todas que todas las tareas estén asignadas a una ET
+            
             if sum(opAsig)==num_tot_act  #si asignaron todas las actividades
                 asignacion_terminada=1
             
@@ -114,7 +111,6 @@ for g in range(1,500): #500=numero d'iteracion
     #! Calcular la eficiencia de la solucion actual y guardar la solucion solo si mejora la eficiencia de la solucion considerada como la mejor hasta el momento
     
     TCT=max(capa_ET)
-    #? autre sum :
     aux2=sum(capa_ET)/(TCT*num_ET) #calculo de la eficiencia 
     if aux2>eff_max :  #para determinar si es mas eficiente que la anterior
         eff_max=aux2
