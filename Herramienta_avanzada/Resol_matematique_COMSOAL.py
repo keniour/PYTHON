@@ -128,15 +128,15 @@ for g in range(iteracion): #500=numero d'iteracion
 
 print(f"Después {iteracion} iteraciones, la mejor solución encontrada es : ")
 print(f"Efficacidad : {eff_max}\n")
-print(f"Composicion ET : ")
-for range,line in enumerate(sol) :
+print("Composicion ET : ")
+for index,line in enumerate(sol) :
     if sum(line)!=0 :
-        print(f"ET n°{range+1} :")
+        print(f"ET n°{index+1} :")
         for value in line :
             if value!=0:
                 print(value)
 
-        print(f"Capacidad total : {sol_capa_ET[0][range]}\n")
+        print(f"Capacidad total : {sol_capa_ET[0][index]}\n")
 
 
 
