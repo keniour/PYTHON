@@ -37,9 +37,10 @@ sol=np.zeros((num_tot_act,num_tot_act)) #matriz de cero donde se pondra la mejor
 sol_capa_ET=np.zeros((1,num_tot_act)) #vector solucion que indica la capacidad de cada ET
 sol_num_ET=0#solucion de la Q de ET
 
+iteracion=5000
 
 
-for g in range(1,500): #500=numero d'iteracion
+for g in range(iteracion): #500=numero d'iteracion
     
     opAsig=np.zeros((1,num_tot_act)) #vector inicial de cero que indica 1 en la posicion i si la tarea i ya fue asignada a un ET
     capa_ET=np.zeros((1,num_tot_act)) #Vector que indica la capacidad de cada ET
@@ -53,7 +54,7 @@ for g in range(1,500): #500=numero d'iteracion
     
     asignacion_terminada=False #variable para terminar el lazo while
     
-    I=0 #variable aux utilizada para guardar las act que realiza cada ET
+    I=-1 #variable aux utilizada para guardar las act que realiza cada ET
     
     while not asignacion_terminada  :
         for i in range(num_tot_act) : #recorrer todas las actividades p ver si pueden ingresar a w
@@ -109,7 +110,7 @@ for g in range(1,500): #500=numero d'iteracion
             
         else :
             num_ET+=1
-            I=0
+            I=-1
     
     #! Calcular la eficiencia de la solucion actual y guardar la solucion solo si mejora la eficiencia de la solucion considerada como la mejor hasta el momento
     
@@ -119,11 +120,23 @@ for g in range(1,500): #500=numero d'iteracion
         eff_max=aux2
         sol=matriz_act
         sol_capa_ET=capa_ET
-        sol_num_ET=num_ET
+        sol_num_ET=num_ET+1
 
 
 
+# Affichage des résultats :
 
+print(f"Después {iteracion} iteraciones, la mejor solución encontrada es : ")
+print(f"Efficacidad : {eff_max}\n")
+print(f"Composicion ET : ")
+for range,line in enumerate(sol) :
+    if sum(line)!=0 :
+        print(f"ET n°{range+1} :")
+        for value in line :
+            if value!=0:
+                print(value)
+
+        print(f"Capacidad total : {sol_capa_ET[0][range]}\n")
 
 
 
