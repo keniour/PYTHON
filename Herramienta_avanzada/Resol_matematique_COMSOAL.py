@@ -7,14 +7,15 @@
 # ! urgent
 # * comentaire classique 
 
-#%%Definicion de las variables 
-import numpy as np
+# %%Definicion de las variables
 import random
+import numpy as np
+
 
 #Definicion del tiempo de ciclo
-TC=12
+TC = 12
 
-num_tot_act=11
+num_tot_act=11 
 
 #duracion de cada actividad :
 duracion=[5,2,3,4,3,2,3,3.5,1,2.5,1]
@@ -35,7 +36,7 @@ precedesores=[[0,0,0,0,0,0,0,0,0,0,0],
 eff_max=0
 sol=np.zeros((num_tot_act,num_tot_act)) #matriz de cero donde se pondra la mejor solucion
 sol_capa_ET=np.zeros((1,num_tot_act)) #vector solucion que indica la capacidad de cada ET
-sol_num_ET=0#solucion de la Q de ET
+sol_num_ET=0 #solucion de la Q de ET # pylint: disable=C0103
 
 iteracion=5000
 
@@ -47,7 +48,7 @@ for g in range(iteracion): #500=numero d'iteracion
     
     matriz_act=np.zeros((num_tot_act,num_tot_act)) #matriz que guarda las actividades que añadamos durante el process 
     #(cada linea=un ET y se pone el numero de las actividades que hace este ET en su linea)
-    #! ATTENTION : les chiffres dans la matriz_act désigne les activités comment commencant par 1 (et non pas par 0)
+    #! ATENCION : los numeros en la matriz_act muestra las actividades commo empezado con 1 (y no con 0)
     num_ET=0
     
     w=np.zeros((1,num_tot_act))
@@ -120,11 +121,11 @@ for g in range(iteracion): #500=numero d'iteracion
         eff_max=aux2
         sol=matriz_act
         sol_capa_ET=capa_ET
-        sol_num_ET=num_ET+1
+        sol_num_ET=num_ET+1 # pylint: disable=C0103
 
 
 
-# Affichage des résultats :
+# Visualización de los resultados :
 
 print(f"Después {iteracion} iteraciones, la mejor solución encontrada es : ")
 print(f"Efficacidad : {eff_max}\n")
