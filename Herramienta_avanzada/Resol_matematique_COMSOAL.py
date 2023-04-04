@@ -38,7 +38,7 @@ sol=np.zeros((num_tot_act,num_tot_act)) #matriz de cero donde se pondra la mejor
 sol_capa_ET=np.zeros((1,num_tot_act)) #vector solucion que indica la capacidad de cada ET
 sol_num_ET=0 #solucion de la Q de ET # pylint: disable=C0103
 
-iteracion=5000
+iteracion=500
 
 
 for g in range(iteracion): #500=numero d'iteracion
@@ -114,7 +114,7 @@ for g in range(iteracion): #500=numero d'iteracion
             I=-1
     
     #! Calcular la eficiencia de la solucion actual y guardar la solucion solo si mejora la eficiencia de la solucion considerada como la mejor hasta el momento
-    
+    num_ET+=1 #se suma uno culpa de la diferencia de manera de contar entre scilab y python (python empeza sus indexos a 0 donde scilab empeza a 0)
     TCT=max(capa_ET[0])
     aux2=sum(capa_ET[0])/(TCT*num_ET) #calculo de la eficiencia 
     if aux2>eff_max :  #para determinar si es mas eficiente que la anterior
@@ -122,6 +122,7 @@ for g in range(iteracion): #500=numero d'iteracion
         sol=matriz_act
         sol_capa_ET=capa_ET
         sol_num_ET=num_ET+1 # pylint: disable=C0103
+
 
 
 
@@ -141,6 +142,10 @@ for index,line in enumerate(sol) :
 
 
 
+
+#explication de l'eff bizarre 
+#c'est que le TCT on le redefinie a chaque boucle pas comme étant de 12
+#mais comme étant du max des capa d'ou notre meilleure capa. 
 
     
         
