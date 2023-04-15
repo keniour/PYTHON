@@ -1,11 +1,8 @@
-"""Ce programme est déstiné a résoudre les problèmes COMSOAL
-    de manière mathématique grâce aux modèles données
-    Ce programme pourra donc être liés aux deux précédents pour créer 
-    une interface de résolution plus agréable et plus friendly
+"""Este programa está diseñado para resolver problemas COMSOAL de forma matemática utilizando los modelos dados. 
 """
-# ? question
-# ! urgent
-# * comentaire classique 
+# ? pregunta
+# ! emergencia
+# * clasic comentario 
 
 # %%Definicion de las variables
 import random
